@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>FinSolusi | Promo Layanan Keuangan Cerdas</title>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f7ff 0%, #eef2f8 100%);
+            color: #1a2634;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        /* Tombol */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 600;
+            border-radius: 56px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            border: none;
+            font-size: 0.95rem;
+            padding: 14px 32px;
+        }
+
+        .btn-primary {
+            background: #0a2b3e;
+            color: white;
+            box-shadow: 0 10px 20px rgba(10, 43, 62, 0.15);
+        }
+
+        .btn-primary:hover {
+            background: #051e2c;
+            transform: translateY(-3px);
+            box-shadow: 0 18px 28px rgba(10, 43, 62, 0.2);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid #0a2b3e;
+            color: #0a2b3e;
+        }
+
+        .btn-outline:hover {
+            background: #0a2b3e;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-accent {
+            background: #1f6e43;
+            color: white;
+            box-shadow: 0 8px 18px rgba(31, 110, 67, 0.2);
+        }
+
+        .btn-accent:hover {
+            background: #155632;
+            transform: translateY(-2px);
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 28px 0 20px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #0a2b3e 0%, #1f6e43 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 36px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #1f6e43;
+        }
+
+        /* Banner promo utama */
+        .promo-banner {
+            background: linear-gradient(105deg, #e9f3ec 0%, #ddebe2 100%);
+            border-radius: 32px;
+            padding: 20px 32px;
+            margin: 24px 0 32px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            border-left: 8px solid #1f6e43;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.03);
+        }
+
+        .promo-text {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .promo-icon {
+            font-size: 2rem;
+            background: #fff2df;
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 60px;
+        }
+
+        .promo-text strong {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #1a5a3a;
+        }
+
+        .countdown {
+            background: #0a2b3e;
+            padding: 10px 28px;
+            border-radius: 60px;
+            color: white;
+            font-weight: 700;
+            font-family: monospace;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 48px;
+            padding: 30px 0 50px;
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .badge {
+            background: #e0efe8;
+            color: #1f6e43;
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            margin-bottom: 24px;
+            letter-spacing: 0.3px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #0b2a36;
+        }
+
+        .hero-highlight {
+            color: #1f6e43;
+            border-bottom: 3px solid #f3b33d;
+        }
+
+        .hero-desc {
+            font-size: 1.05rem;
+            color: #4a5b6e;
+            margin-bottom: 32px;
+            max-width: 90%;
+        }
+
+        .stats {
+            display: flex;
+            gap: 36px;
+            margin-top: 28px;
+        }
+
+        .stat-number {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #0a2b3e;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #6c7e94;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            width: 500px;
+            border-radius: 40px;
+            box-shadow: 0 30px 40px -20px rgba(0,0,0,0.15);
+        }
+
+        /* Grid layanan promo */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 64px 0 24px;
+            text-align: center;
+        }
+
+        .section-title span {
+            background: linear-gradient(120deg, #0a2b3e, #1f6e43);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .subhead {
+            text-align: center;
+            color: #5a6e85;
+            margin-bottom: 40px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin: 20px 0 40px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 36px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 45px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-icon {
+            background: #f4f9fe;
+            text-align: center;
+            padding: 36px 20px 20px;
+            font-size: 3rem;
+        }
+
+        .card-info {
+            padding: 20px 24px 32px;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #0a2b3e;
+            margin: 12px 0;
+        }
+
+        .old-price {
+            font-size: 0.9rem;
+            color: #9aaebe;
+            text-decoration: line-through;
+            margin-left: 8px;
+            font-weight: 400;
+        }
+
+        .promo-tag {
+            background: #fff0e0;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #c25d1a;
+            margin-bottom: 12px;
+        }
+
+        .card-btn {
+            width: 100%;
+            background: #0a2b3e;
+            color: white;
+            border: none;
+            border-radius: 40px;
+            padding: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 20px;
+        }
+
+        .card-btn:hover {
+            background: #1f6e43;
+        }
+
+        /* Paket unggulan (bundle) */
+        .premium-offer {
+            background: linear-gradient(125deg, #fef9ed 0%, #f6f2e6 100%);
+            border-radius: 48px;
+            padding: 48px 40px;
+            margin: 56px 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 48px;
+        }
+
+        .offer-content {
+            flex: 1.2;
+        }
+
+        .offer-badge {
+            background: #f3b33d;
+            color: #1e2a2a;
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 0.7rem;
+        }
+
+        .offer-content h3 {
+            font-size: 2rem;
+            margin: 18px 0 12px;
+        }
+
+        .offer-price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1a5a3a;
+            margin: 16px 0;
+        }
+
+        .offer-image img {
+            max-width: 240px;
+            border-radius: 32px;
+        }
+
+        /* Testimonial */
+        .testimonial {
+            background: white;
+            border-radius: 32px;
+            padding: 40px 32px;
+            margin: 48px 0;
+            text-align: center;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.03);
+        }
+
+        .testimonial i {
+            font-size: 2rem;
+            color: #cbdbe0;
+            margin-bottom: 16px;
+        }
+
+        .testimonial p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            color: #2c3e50;
+            font-style: italic;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 80px;
+            background: #0a1a24;
+            color: #cbd5e6;
+            padding: 48px 0 24px;
+            border-radius: 48px 48px 0 0;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 32px;
+        }
+
+        .footer-col p {
+            max-width: 260px;
+            margin-top: 12px;
+            font-size: 0.8rem;
+        }
+
+        .footer-col a {
+            color: #bdd3ff;
+            text-decoration: none;
+            display: block;
+            margin: 8px 0;
+            font-size: 0.85rem;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 48px;
+            font-size: 0.7rem;
+            border-top: 1px solid #1f3445;
+            padding-top: 24px;
+        }
+
+        @media (max-width: 800px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .container {
+                padding: 0 20px;
+            }
+            .premium-offer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><i class="fas fa-chart-line" style="margin-right: 6px;"></i> FinSolusi</div>
+        <div class="nav-links">
+            <a href="#">Beranda</a>
+            <a href="#">Layanan</a>
+            <a href="#">Promo</a>
+            <a href="#">Konsultasi</a>
+            <a href="#" class="btn btn-outline" style="padding: 8px 22px;"><i class="fas fa-user-circle"></i> Area Klien</a>
+        </div>
+    </nav>
+
+    <!-- Banner Promo Spesial -->
+    <div class="promo-banner" id="promoBanner">
+        <div class="promo-text">
+            <div class="promo-icon"><i class="fas fa-fire"></i></div>
+            <div><strong>🎉 PROMO AWAL TAHUN 🎉</strong> — Diskon 35% + Konsultasi Gratis untuk 50 pendaftar pertama</div>
+        </div>
+        <div class="countdown" id="countdownTimer">47:59:59</div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <div class="badge"><i class="fas fa-medal"></i> #1 Solusi Keuangan 2025</div>
+            <h1>Atur Keuangan Lebih <span class="hero-highlight">Cerdas & Menguntungkan</span></h1>
+            <p class="hero-desc">Dapatkan akses ke layanan perencanaan keuangan, investasi, dan proteksi risiko dengan promo spesial. Mulai dari 0% biaya administrasi untuk 3 bulan pertama.</p>
+            <div style="display: flex; gap: 18px; flex-wrap: wrap;">
+                <a href="#" class="btn btn-primary" id="heroCtaBtn"><i class="fas fa-calendar-check"></i> Konsultasi Gratis</a>
+                <a href="#" class="btn btn-outline" id="heroCtaOutline"><i class="fas fa-percent"></i> Lihat Promo</a>
+            </div>
+            <div class="stats">
+                <div><span class="stat-number">98%</span> <span class="stat-label">klien puas</span></div>
+                <div><span class="stat-number">Rp 2.5T+</span> <span class="stat-label">aset dikelola</span></div>
+                <div><span class="stat-number">24/7</span> <span class="stat-label">layanan prioritas</span></div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://placehold.co/540x440/eef2f5/1f6e43?text=Solusi+Keuangan+Modern&font=montserrat" alt="layanan keuangan">
+        </div>
+    </div>
+
+    <!-- Judul Promo Layanan -->
+    <div class="section-title"><span>✨ Promo Layanan Keuangan ✨</span></div>
+    <div class="subhead">Pilih paket terbaik dengan diskon spesial terbatas</div>
+
+    <!-- Grid Layanan -->
+    <div class="card-grid" id="servicesGrid">
+        <!-- Layanan 1: Perencanaan Keuangan -->
+        <div class="service-card">
+            <div class="card-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+            <div class="card-info">
+                <div class="promo-tag"><i class="fas fa-tag"></i> Hemat 40%</div>
+                <div class="service-title">Perencanaan Keuangan</div>
+                <div class="price">Rp 349k<span class="old-price"> Rp 599k</span><span style="font-size:0.8rem;"> /bln</span></div>
+                <p style="font-size:0.9rem;">✔ Konsultasi 1-on-1 + rencana keuangan custom<br>✔ Cashflow & manajemen utang<br>✔ Target tabungan & dana darurat</p>
+                <button class="card-btn service-toast" data-service="Perencanaan Keuangan"><i class="fas fa-gem"></i> Ambil Promo</button>
+            </div>
+        </div>
+        <!-- Layanan 2: Investasi & Pasar Modal -->
+        <div class="service-card">
+            <div class="card-icon"><i class="fas fa-chart-pie"></i></div>
+            <div class="card-info">
+                <div class="promo-tag"><i class="fas fa-bolt"></i> Best Seller</div>
+                <div class="service-title">Investasi & Pasar Modal</div>
+                <div class="price">Rp 499k<span class="old-price"> Rp 799k</span><span style="font-size:0.8rem;"> /bln</span></div>
+                <p>✔ Rekomendasi reksadana & saham<br>✔ Optimalisasi portofolio + analisis risiko<br>✔ Akses webinar eksklusif</p>
+                <button class="card-btn service-toast" data-service="Investasi & Pasar Modal"><i class="fas fa-chart-line"></i> Dapatkan Diskon</button>
+            </div>
+        </div>
+        <!-- Layanan 3: Proteksi & Asuransi -->
+        <div class="service-card">
+            <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="card-info">
+                <div class="promo-tag"><i class="fas fa-gift"></i> Free Asesmen</div>
+                <div class="service-title">Proteksi & Manajemen Risiko</div>
+                <div class="price">Rp 279k<span class="old-price"> Rp 449k</span><span style="font-size:0.8rem;"> /bln</span></div>
+                <p>✔ Evaluasi polis asuransi<br>✔ Perlindungan aset & warisan<br>✔ Konsultasi klaim gratis</p>
+                <button class="card-btn service-toast" data-service="Proteksi & Manajemen Risiko"><i class="fas fa-umbrella"></i> Klaim Sekarang</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Paket Unggulan: Solusi Finansial 360° -->
+    <div class="premium-offer">
+        <div class="offer-content">
+            <div class="offer-badge"><i class="fas fa-crown"></i> PAKET PREMIUM</div>
+            <h3>Solusi Finansial 360°</h3>
+            <p>Layanan all-in-one: perencanaan keuangan + investasi + proteksi + konsultasi unlimited dengan pakar keuangan bersertifikasi. Termasuk laporan triwulan & akses dashboard prioritas.</p>
+            <div class="offer-price">Rp 899k<span style="font-size: 1rem;">/bln</span> <span style="font-size: 1rem; text-decoration: line-through; color: #7b8c9e;">Rp 1.599k</span></div>
+            <a href="#" class="btn btn-accent" id="premiumBundleBtn"><i class="fas fa-star"></i> Coba 14 Hari Gratis</a>
+        </div>
+        <div class="offer-image">
+            <img src="https://placehold.co/240x200/eef2ea/1f6e43?text=Paket+Premium+360&font=montserrat" alt="paket premium keuangan">
+        </div>
+    </div>
+
+    <!-- Testimoni Klien -->
+    <div class="testimonial">
+        <i class="fas fa-quote-left"></i>
+        <p>“FinSolusi membantu saya menyusun rencana pensiun dan investasi yang sebelumnya terasa rumit. Dalam 6 bulan, aset saya tumbuh 23% dan rasa tenang luar biasa. Promonya sangat worth it!”</p>
+        <div style="font-weight: 600; color:#1f6e43;">— Ibu Sinta Wijaya, Pengusaha</div>
+        <div style="font-size:0.8rem; margin-top:8px;"><i class="fas fa-star" style="color: #f3b33d;"></i><i class="fas fa-star" style="color: #f3b33d;"></i><i class="fas fa-star" style="color: #f3b33d;"></i><i class="fas fa-star" style="color: #f3b33d;"></i><i class="fas fa-star" style="color: #f3b33d;"></i> 5.0 / 5.0</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <div class="logo" style="color:#eef5ff; background:none; -webkit-background-clip: unset;">FinSolusi</div>
+                <p>Mitra terpercaya untuk kesehatan finansial Anda. Terdaftar dan diawasi OJK.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Layanan</h4>
+                <a href="#">Perencanaan Keuangan</a>
+                <a href="#">Investasi</a>
+                <a href="#">Asuransi & Proteksi</a>
+            </div>
+            <div class="footer-col">
+                <h4>Promo</h4>
+                <a href="#">Diskon Early Bird</a>
+                <a href="#">Paket Keluarga</a>
+                <a href="#">Referral Bonus</a>
+            </div>
+            <div class="footer-col">
+                <h4>Hubungi Kami</h4>
+                <a href="#"><i class="fab fa-whatsapp"></i> +62 812 3456 7890</a>
+                <a href="#"><i class="far fa-envelope"></i> hello@finsolusi.co.id</a>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 FinSolusi — Solusi Keuangan Cerdas. Semua promo berlaku hingga stok habis.
+        </div>
+    </div>
+</div>
+
+<script>
+    // Countdown timer (48 jam dari sekarang)
+    function startCountdown() {
+        let endTime = new Date().getTime() + (48 * 60 * 60 * 1000);
+        function updateTimer() {
+            const now = new Date().getTime();
+            const distance = endTime - now;
+            if (distance < 0) {
+                document.getElementById('countdownTimer').innerHTML = "Promo Berakhir";
+                return;
+            }
+            const hours = Math.floor((distance % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+            const minutes = Math.floor((distance % (60 * 60 * 1000)) / (60 * 1000));
+            const seconds = Math.floor((distance % (60 * 1000)) / 1000);
+            document.getElementById('countdownTimer').innerHTML = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        updateTimer();
+        setInterval(updateTimer, 1000);
+    }
+
+    // Toast notification modern
+    function showToast(message, isSuccess = true) {
+        let toast = document.querySelector('.custom-toast-fin');
+        if (toast) toast.remove();
+        const toastDiv = document.createElement('div');
+        toastDiv.className = 'custom-toast-fin';
+        toastDiv.innerHTML = `<i class="fas ${isSuccess ? 'fa-circle-check' : 'fa-bell'}"></i> ${message}`;
+        toastDiv.style.position = 'fixed';
+        toastDiv.style.bottom = '30px';
+        toastDiv.style.left = '50%';
+        toastDiv.style.transform = 'translateX(-50%)';
+        toastDiv.style.backgroundColor = isSuccess ? '#0a2b3e' : '#c25d1a';
+        toastDiv.style.color = 'white';
+        toastDiv.style.padding = '14px 28px';
+        toastDiv.style.borderRadius = '60px';
+        toastDiv.style.fontWeight = '600';
+        toastDiv.style.boxShadow = '0 12px 28px rgba(0,0,0,0.2)';
+        toastDiv.style.zIndex = '9999';
+        toastDiv.style.fontFamily = "'Inter', sans-serif";
+        toastDiv.style.fontSize = '0.9rem';
+        toastDiv.style.backdropFilter = 'blur(6px)';
+        toastDiv.style.display = 'flex';
+        toastDiv.style.alignItems = 'center';
+        toastDiv.style.gap = '10px';
+        document.body.appendChild(toastDiv);
+        setTimeout(() => {
+            toastDiv.style.opacity = '0';
+            toastDiv.style.transition = 'opacity 0.25s';
+            setTimeout(() => toastDiv.remove(), 250);
+        }, 3200);
+    }
+
+    // Tombol layanan promo
+    function bindServiceButtons() {
+        const btns = document.querySelectorAll('.service-toast');
+        btns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const service = btn.getAttribute('data-service') || 'layanan pilihan';
+                showToast(`✅ Promo ${service} berhasil diklaim! Kode "PROMO35" berlaku di checkout.`, true);
+                const card = btn.closest('.service-card');
+                if(card) card.style.transform = 'scale(0.98)';
+                setTimeout(() => { if(card) card.style.transform = ''; }, 150);
+            });
+        });
+    }
+
+    // Global CTA
+    function bindGlobal() {
+        const premiumBtn = document.getElementById('premiumBundleBtn');
+        if(premiumBtn) {
+            premiumBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                showToast('🎉 Paket Premium 360° — 14 hari gratis telah diaktifkan! Cek email Anda.', true);
+            });
+        }
+        const heroCta = document.getElementById('heroCtaBtn');
+        if(heroCta) {
+            heroCta.addEventListener('click', (e) => {
+                e.preventDefault();
+                showToast('📞 Konsultasi gratis dijadwalkan. Tim kami akan menghubungi maksimal 1x24 jam.', true);
+            });
+        }
+        const heroOutline = document.getElementById('heroCtaOutline');
+        if(heroOutline) {
+            heroOutline.addEventListener('click', (e) => {
+                e.preventDefault();
+                showToast('✨ Diskon spesial hingga 40% untuk semua layanan. Buruan daftar!', false);
+            });
+        }
+        const navClient = document.querySelector('.nav-links .btn-outline');
+        if(navClient) {
+            navClient.addEventListener('click', (e) => {
+                e.preventDefault();
+                showToast('🔐 Login ke area klien & dapatkan promo eksklusif.', true);
+            });
+        }
+    }
+
+    // tambahan animasi sederhana pada hero image
+    function imageHoverEffect() {
+        const img = document.querySelector('.hero-image img');
+        if(img) {
+            const heroDiv = document.querySelector('.hero');
+            heroDiv?.addEventListener('mousemove', (e) => {
+                const rect = heroDiv.getBoundingClientRect();
+                const xAxis = (rect.left + rect.width/2 - e.clientX) / 35;
+                const yAxis = (rect.top + rect.height/2 - e.clientY) / 35;
+                img.style.transform = `perspective(600px) rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+            });
+            heroDiv?.addEventListener('mouseleave', () => {
+                img.style.transform = 'perspective(600px) rotateY(0deg) rotateX(0deg)';
+            });
+        }
+    }
+
+    // style tambahan untuk toast
+    const style = document.createElement('style');
+    style.textContent = `
+        .custom-toast-fin {
+            animation: slideUpFade 0.2s ease-out;
+        }
+        @keyframes slideUpFade {
+            from { opacity: 0; transform: translateX(-50%) translateY(20px);}
+            to { opacity: 1; transform: translateX(-50%) translateY(0px);}
+        }
+    `;
+    document.head.appendChild(style);
+
+    startCountdown();
+    bindServiceButtons();
+    bindGlobal();
+    imageHoverEffect();
+</script>
+</body>
+</html>
